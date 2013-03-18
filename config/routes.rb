@@ -3,9 +3,9 @@ I18nDemo::Application.routes.draw do
     match 'about' => 'home#about'
     match 'contact' => 'home#contact'
     match '/' => 'home#index'
+    root :to => "home#index"
   end
 
-  root :to => "home#index"
 
 
 
