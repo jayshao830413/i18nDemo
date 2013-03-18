@@ -1,4 +1,14 @@
 I18nDemo::Application.routes.draw do
+  scope ":locale" do
+    match 'about' => 'home#about'
+    match 'contact' => 'home#contact'
+    match '/' => 'home#index'
+  end
+
+  root :to => "home#index"
+
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

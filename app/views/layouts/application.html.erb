@@ -7,8 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">Title</a>
+    <ul class="nav">
+      <li class="active"><%= link_to "home", root_path %></li>
+      <li><%= link_to "about", about_path %></li>
+      <li><%= link_to "contact", contact_path %></li>
+      <li><%= link_to_unless_current "English", locale: "en" %> </li>
+      <li><%= link_to_unless_current "Chinese", locale: "cn" %></li>
+    </ul>
+  </div>
+</div>
 <%= yield %>
-
 </body>
 </html>
