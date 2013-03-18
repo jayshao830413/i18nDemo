@@ -1,5 +1,5 @@
 I18nDemo::Application.routes.draw do
-  scope ":locale" do
+  scope "(:locale)", :locale => /en|cn/ do
     match 'about' => 'home#about'
     match 'contact' => 'home#contact'
     match '/' => 'home#index'
