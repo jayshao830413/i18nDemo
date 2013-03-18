@@ -14,6 +14,8 @@
       <li><%= link_to "home", root_path %></li>
       <li><%= link_to "about", about_path %></li>
       <li><%= link_to "contact", contact_path %></li>
+    </ul>
+    <ul class= "nav pull-right">
       <li><%= link_to_unless_current "English", locale: "en" %> </li>
       <li><%= link_to_unless_current "Chinese", locale: "cn" %></li>
     </ul>
